@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<head>
+        <img id="logo" src="{{ url_for('static', filename='image/squirtledance.gif') }}">
+        <title>Choose the day.</title>
+</head>
+<body>
+    <h3>Select your name, subject, and upload your file.</h3>
+    <p>Note: after submission, the loading process might take some time. Please be patient.</p>
+    <form action="{{ url_for('file_upload') }}" method="post" enctype = "multipart/form-data">
+        <select id="wtf" name="student_name">
+        {% for i in range(0,len_student_name_list) %}
+             <option value={{ i }}>{{ student_name_list[i] }}</option>
+        {% endfor %}
+        </select>
+        
+        <select id="wtf" name="subject">
+        {% for i in range(0,len_subjects_today) %}
+             <option value={{ i }}>{{ subjects_today[i] }}</option>
+        {% endfor %}
+        </select>
+        
+        <input type="file" name="file" />
+        
+        <input type="submit" value="Submit">
+    </form>
+    <div id="footer">
+        <p>This w3bsite is an experimental product (Don't worry, it does work).</p>
+        <p>It is intended to be used as my  HelloWebCoding project.</p>
+        <p>&copy; 2020 k4j4/dtbpkmte.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='registration_style.css') }}">
+
+    <img id="logo" src="{{ url_for('static', filename='image/squirtledance.gif') }}">
+    <title>HNSTUDY Registration</title>
+</head>
+<body>
+    <h1>Welcome.</h1>
+    <h1>This is hanoistudy registration page for {{ submit_date_dmy }}.</h1>
+    
+    <p>You can check the result at this link: <a href="https://docs.google.com/spreadsheets/d/your_id">Spreadsheet</a></p>
+    <p>Should there be any problems, please contact me at...you already knew how.</p>
+    
+
+    
+<!--
+    <h6>For debug:</h6>
+    <p>{{submit_date_pat}}</p>
+    <p>{{url_for_test}}</p>
+    <p>{{valid}}</p>
+    <p>{{one_item_in_dropdown}}</p>
+    <p>{{req_form}}</p>
+-->
+
+    <form action="{{ url_for('hn_registration') }}" method="post" enctype = "multipart/form-data">
+        <select id="names" name="name_index">
+        {% for i in range(0,len_dropdown_content) %}
+             <option value={{ i }}>{{ dropdown_content[i] }}</option>
+        {% endfor %}
+        </select>
+        
+        <input type="submit" value="Register">
+    </form>
+    
+<!--
+    <div class="progress">
+      <div id="progressBar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+        0%
+      </div>
+    </div>
+-->
+    
+    <div id="footer">
+        <p>This website is an experimental product (Don't worry, it does work).</p>
+        <p>It is intended to be used as my  HelloWebCoding project.</p>
+        <p>&copy; 2020 k4j4/dtbpkmte.</p>
+    </div>
+</body>
+</html>

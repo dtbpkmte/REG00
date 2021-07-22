@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <form action="{{ url_for('test') }}" method="post">
+        <select id="names" name="name_index">
+        {% for i in range(0,len_dropdown_content) %}
+             <option value={{ i }}>{{ dropdown_content[i] }}</option>
+        {% endfor %}
+        </select>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>

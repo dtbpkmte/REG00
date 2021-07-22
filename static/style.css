@@ -1,0 +1,14 @@
+#footer {
+/*
+    position: fixed;
+*/
+    bottom: 0;
+    width: 100%;
+    background-color: lightblue;
+    border-style: dotted dashed solid double;
+}
+
+#logo {
+    margin-left: 0px;
+    margin-top:0px
+}

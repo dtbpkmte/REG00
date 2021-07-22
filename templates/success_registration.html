@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='succ_result_style.css') }}">
+<head>
+    <title>Submitted successfully</title>
+</head>
+<body>
+    <h1>You have SUCCESSFULLY registered for {{ submit_date_dmy }}.</h1>
+    <p>You can check the result at this link: <a href="https://docs.google.com/spreadsheets/d/your_id">Spreadsheet</a></p>
+    <p>And this: <a href="https://drive.google.com/drive/u/0/folders/your_id">Drive</a></p>
+    <br />
+    <img id="logo" src="{{ url_for('static', filename='image/squirtledance.gif') }}">
+    <img id="logo" src="{{ url_for('static', filename='image/squirtledance.gif') }}">
+    <img id="logo" src="{{ url_for('static', filename='image/squirtledance.gif') }}">
+    <br />
+    <br />
+    <a href="{{ url_for('index') }}">Return to Home</a>
+    <div id="footer">
+        <p>This website is an experimental product (Don't worry, it does work).</p>
+        <p>It is intended to be used as my  HelloWebCoding project.</p>
+        <p>&copy; 2020 k4j4/dtbpkmte.</p>
+    </div>
+</body>
+</html>

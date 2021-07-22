@@ -1,0 +1,1 @@
+web: gunicorn reg00:app

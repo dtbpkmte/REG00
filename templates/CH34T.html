@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<head>
+    <img id="logo" src="{{ url_for('static', filename='image/squirtledance.gif') }}">
+    <title>Cheat site</title>
+</head>
+<body>
+    <p>Heh, I feel safe here. They can never find me kkk</p>
+    <p><b>...</b></p>
+    <p><b>...</b></p>
+    <p><b>...</b></p>
+    <p><b>...</b></p>
+    <p>...What?! Who are you?! How can you...</p>
+    <p>OK, I lost. Here's your gift, as promised. Open now, and then go away. I wish I will never meet you again.</p>
+    
+    <form action="{{ url_for('cheat_site') }}" method="post">
+        <input type="submit" value="Open GIFT">
+    </form>
+    
+</body>
+</html>
